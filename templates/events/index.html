@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h1 class="text-center mb3"> Latest Events </h1>
+    {% if latest_event_list%}
+        {% for event in latest_event_list%}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <p class="lead">
+                        {{ event.event_title }}
+                    </p>
+                    <p>{{ event.event_date}}</p>
+                    <a href="{% url 'events:detail' event.id %}" class="btn btn-primary btn-sm">
+                        See Details
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        No events found
+    {% endif %}
+{% endblock %}

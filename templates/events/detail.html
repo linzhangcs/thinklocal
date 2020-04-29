@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+    {% block content %}
+       <a href="{% url 'events:index' %}" class="btn btn-secondary btn-sm mb-3">Back To Events</a>
+       <h1 class="text-center mb-3">{{ event.event_title }}</h1>
+       <p>{{ event.event_date }}</p>
+        <div>About the Event: {{ event.description }}</div>
+        <div>organizer: {{ event.organizer }}</div>
+       
+    {% endblock %}
