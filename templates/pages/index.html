@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card text-center">
+    <div class="card-body">
+        <h1>Welcome To ThinkLocal</h1>
+        <p>This is the landing page</p>
+        <a href="{% url 'events:index' %}" class="btn btn-dark">
+            View Available Events
+        </a>
+    </div>
+</div>
+{% endblock %}
