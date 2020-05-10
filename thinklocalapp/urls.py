@@ -20,4 +20,6 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('events/', include('events.urls')),
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('events.api.urls'))
 ]
