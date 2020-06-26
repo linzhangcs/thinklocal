@@ -5,8 +5,6 @@ DEFAULT_FK_ID = 1
 
 class User(models.Model):
     user_name = models.CharField(max_length=200)
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
     email = models.EmailField()
     zipcode = models.CharField(max_length=20)
     join_reason = models.CharField(max_length=500)
@@ -20,6 +18,7 @@ class Group(models.Model):
     create_date = models.DateTimeField()
     create_by = models.CharField(max_length=200)
     group_name = models.CharField(max_length=200)
+    # description = models.TextField()
     creator = models.ForeignKey(
         User, on_delete=models.DO_NOTHING, default=DEFAULT_FK_ID)
 

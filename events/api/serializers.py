@@ -13,8 +13,7 @@ class EventSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("id", "user_name", "first_name",
-                  "last_name", "email",
+        fields = ("id", "user_name", "email",
                   "zipcode", "join_reason", "password")
 
 
